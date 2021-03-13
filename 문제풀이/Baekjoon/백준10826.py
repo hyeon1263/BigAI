@@ -15,3 +15,14 @@ for i in range(n):
     fib.append(fib[i]+fib[i+1])
 
 print(fib[n])
+
+def fibo(n):
+    x, y = 0, 1
+    for i in range(n):
+        temp = x
+        x = y
+        y = temp + y
+    return x
+
+n = int(input())
+print(fibo(n))
