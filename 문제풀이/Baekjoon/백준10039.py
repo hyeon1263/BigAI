@@ -14,5 +14,4 @@ for i in range(5):
     if score < 40:
         score = 40
     sum += score
-
 print(int(sum/5))
