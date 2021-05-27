@@ -20,9 +20,3 @@ while 1:
             print(j, end=' ')
         print()
     print()
-
-from itertools import combinations
-b = [1,2,3,4,5,6,7]
-a = combinations(b,6)
-for i in a:
-    print(i)
