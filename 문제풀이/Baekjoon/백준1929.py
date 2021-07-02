@@ -23,3 +23,18 @@ M, N = map(int, input().split())
 for i in range(M, N+1):
     if is_prime(i):
         print(i)
+
+# Dynamic Programming 적용..
+
+M, N = map(int, input().split())
+dp = [False, False] + [True] * (N-1) # 0,1 은 False, 뒤에는 True로 세팅
+primes = []
+
+for i in range(2, N+1):
+    if dp[i]:
+        for j in range(2*i, N+1, i):
+            dp[j] = False
+
+for i in range(M, N+1):
+    if dp[i]:
+        print(i)
